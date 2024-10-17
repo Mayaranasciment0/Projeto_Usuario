@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.exception.UsuarioNotFoundException;
-import com.example.demo.exception.InvalidUsuarioException;
+import com.example.demo.exception.usuario.InvalidUsuarioException;
+import com.example.demo.exception.usuario.UsuarioNotFoundException;
 import com.example.demo.model.Usuario;
 import com.example.demo.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,7 +61,6 @@ public class UsuarioService {
             usuario.setBio(usuarioDetails.getBio());
             usuario.setContato(usuarioDetails.getContato());
             usuario.setLocalizacao(usuarioDetails.getLocalizacao());
-            usuario.setAvaliacao(usuarioDetails.getAvaliacao());
             usuario.setFotoPerfil(usuarioDetails.getFotoPerfil());
             return usuarioRepository.save(usuario);
         }).orElseThrow(() -> new UsuarioNotFoundException(

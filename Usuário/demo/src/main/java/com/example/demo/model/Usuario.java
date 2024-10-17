@@ -1,7 +1,5 @@
 package com.example.demo.model;
 
-import com.usuario.demo.model.Avaliacao;
-
 import java.util.*;
 
 import jakarta.persistence.*;
@@ -15,28 +13,28 @@ import lombok.*;
 @ToString
 public class Usuario {
 
-@Column
-private String nomeUsuario;
+    @Column
+    private String nomeUsuario;
 
-@Column
-private String email;
+    @Column
+    private String email;
 
-@Column
-private String senha;
+    @Column
+    private String senha;
 
-@Column
-private String bio;
+    @Column
+    private String bio;
 
-@Column
-private String contato;
+    @Column
+    private String contato;
 
-@Column
-private String localizacao;
+    @Column
+    private String localizacao;
 
-@Column
-private ArrayList<Avaliacao> avaliacao;
+    // @Column
+    // private ArrayList<Avaliacao> avaliacao;
 
-@Column
-private byte fotoPerfil;
-    
+    @Column
+    private byte fotoPerfil;
+
 }
